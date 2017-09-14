@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    
+    
+    
+    
+    
+    @IBOutlet var pushButton: UIButton!
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +33,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func pushButtonPressed(_ sender: Any) {
+        
+        
+        
+        
+        print("push controller")
+        
+        
+        
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "PushedViewController") as? PushedViewController  {
+            
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+        
+        
+    }
+    
+    
+    
 
 }
 
